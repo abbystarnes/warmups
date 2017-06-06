@@ -1,5 +1,4 @@
-let pokemon = [
-  {
+let pokemon = [{
     id: 1,
     name: 'Bulbasaur',
     type: 'grass',
@@ -63,3 +62,5 @@ let pokemon = [
     image_url: 'http://www.pokestadium.com/sprites/xy/blastoise.gif'
   }
 ];
+
+module.exports = pokemon;

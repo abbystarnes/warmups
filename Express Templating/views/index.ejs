@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>All Pokemon</title>
+  <link href="/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <td>Sprite</td>
+        <td>Name</td>
+        <td>Pokedex Number</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% pokemon.forEach(function(poke) {  %>
+        <tr>
+          <td class='image-cell'>
+            <a href="/pokemon/<%= poke.id %>"><img src="<%= poke.image_url %>" alt=""></a>
+          </td>
+          <td>
+            <%= poke.name %>
+          </td>
+          <td>
+            <%= poke.id %>
+          </td>
+        </tr>
+        <% }); %>
+
+    </tbody>
+  </table>
+</body>
+
+</html>
+<!-- RED DATA HERE -->
+
+</tbody>
+</table>
+</body>
+
+</html>
