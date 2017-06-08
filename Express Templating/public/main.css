@@ -18,3 +18,23 @@ td {
   text-align: center;
   margin: 0 auto;
 }
+
+.error {
+  color: black;
+  font-weight: bold;
+  /*width: 475px;*/
+  display: block;
+  margin: 0 auto;
+  margin-top: calc(50vh - 100px);
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.text {
+  float: left;
+  /*width: 200px;*/
+  margin: 0 auto;
+  vertical-align: middle;
+  height: 100%;
+}

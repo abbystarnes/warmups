@@ -35,10 +35,18 @@ app.get('/pokemon/:id', (req, res) => {
   })
 })
 
-app.use(function(req, res) {
-  res.setHeader('Content-Type', 'text/plain');
-  res.statusCode = 404;
-  res.end('Not Found');
+app.use(function(_req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use(function(err, _req, res, _next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: err
+  });
 });
 
 app.listen(port, function() {
