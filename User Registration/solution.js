@@ -8,6 +8,9 @@ const environment = process.env.NODE_ENV || 'development';
 const knexConfig = require('./knexfile')[environment];
 const knex = require('knex')(knexConfig);
 
+
+app.disable('x-powered-by');
+
 const bcrypt = require('bcrypt-as-promised');
 const bodyParser = require('body-parser');
 

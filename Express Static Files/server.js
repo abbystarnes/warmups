@@ -4,12 +4,16 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 const path = require('path');
+const myPublic = __dirname + "/public/";
 
-app.use(express.static('public'));
+app.use(express.static(myPublic));
+
+app.get('/index', (req, res) => {
+  res.sendFile(path.join(myPublic + "index.html"));
+});
 
 app.use((req, res) => {
-  const filePath = path.join(__dirname, 'public', '404.html');
-  res.sendFile(filePath);
+  res.sendFile(path.join(myPublic + '404.html'));
 });
 
 app.listen(port, () => {
